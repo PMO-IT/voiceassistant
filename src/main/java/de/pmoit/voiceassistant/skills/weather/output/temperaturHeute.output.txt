@@ -1,0 +1,1 @@
+Aktuel hat es [replaceA] Grad die Höchstemperatur liegt heute bei [replaceB], der niedrigste Wert bei [replaceC] Grad in [replaceOrt].

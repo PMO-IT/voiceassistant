@@ -1,0 +1,2 @@
+Nein, es [replaceA] heute nicht in [replaceOrt].
+Heute [replaceA] es nicht in [replaceOrt].

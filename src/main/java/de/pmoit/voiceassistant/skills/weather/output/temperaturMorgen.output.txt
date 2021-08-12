@@ -1,0 +1,1 @@
+Morgen liegt die Höchstemperatur bei [replaceA] Grad, der niedrigste Wert bei [replaceB] Grad in [replaceOrt].

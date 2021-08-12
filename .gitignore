@@ -1,0 +1,24 @@
+target/
+log/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+# https://github.com/takari/maven-wrapper#usage-without-binary-jar
+.mvn/wrapper/maven-wrapper.jar
+.classpath
+.project
+.settings
+src/main/java/de/pmoit/voiceassistant/skills/intervalltimer
+src/main/java/de/pmoit/voiceassistant/skills/light
+src/main/java/de/pmoit/voiceassistant/skills/reminder
+src/main/java/de/pmoit/voiceassistant/skills/rssreader
+src/main/java/de/pmoit/voiceassistant/skills/spotify
+src/main/java/de/pmoit/voiceassistant/skills/youtube
+resources/skills/light.config.properties
+resources/skills/rssreader.config.properties
+resources/skills/spotify.config.properties

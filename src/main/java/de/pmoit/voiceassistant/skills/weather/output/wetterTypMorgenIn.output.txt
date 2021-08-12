@@ -1,0 +1,2 @@
+Morgen gibt es [replaceA]  in [replaceOrt]
+Morgen soll [replaceA] geben, in [replaceOrt]

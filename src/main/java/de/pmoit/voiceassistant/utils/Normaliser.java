@@ -1,0 +1,91 @@
+package de.pmoit.voiceassistant.utils;
+
+/**
+ * Nomaliser class, translates text to numbers.
+ */
+public class Normaliser {
+    public static String normaliseNumbers(String spokenPhrase) {
+        spokenPhrase = spokenPhrase.replaceAll("\\beiner\\b", "1");
+        spokenPhrase = spokenPhrase.replaceAll("\\beins\\b", "1");
+        spokenPhrase = spokenPhrase.replaceAll("\\bein\\b", "1");
+        spokenPhrase = spokenPhrase.replaceAll("\\bzwei\\b", "2");
+        spokenPhrase = spokenPhrase.replaceAll("\\bdrei\\b\\b", "3");
+        spokenPhrase = spokenPhrase.replaceAll("\\bvier\\b", "4");
+        spokenPhrase = spokenPhrase.replaceAll("\\bfünf\\b", "5");
+        spokenPhrase = spokenPhrase.replaceAll("\\bsechs\\b", "6");
+        spokenPhrase = spokenPhrase.replaceAll("\\bsieben\\b", "7");
+        spokenPhrase = spokenPhrase.replaceAll("\\bacht\\b", "8");
+        spokenPhrase = spokenPhrase.replaceAll("\\bneun\\b", "9");
+        spokenPhrase = spokenPhrase.replaceAll("\\bzehn\\b", "10");
+        spokenPhrase = spokenPhrase.replaceAll("\\belf\\b", "11");
+        spokenPhrase = spokenPhrase.replaceAll("\\bzwölf\\b", "12");
+        spokenPhrase = spokenPhrase.replaceAll("\\bdreizehn\\b", "13");
+        spokenPhrase = spokenPhrase.replaceAll("\\bvierzehn\\b", "14");
+        spokenPhrase = spokenPhrase.replaceAll("\\bfünfzehnn\\b", "15");
+        spokenPhrase = spokenPhrase.replaceAll("\\bsechzehn\\b", "16");
+        spokenPhrase = spokenPhrase.replaceAll("\\bsiebzehn\\b", "17");
+        spokenPhrase = spokenPhrase.replaceAll("\\bachtzehn\\b", "18");
+        spokenPhrase = spokenPhrase.replaceAll("\\bneunzehn\\b", "19");
+        spokenPhrase = spokenPhrase.replaceAll("\\bzwanzig\\b", "20");
+        spokenPhrase = spokenPhrase.replaceAll("\\beinundzwanzig\\b", "21");
+        spokenPhrase = spokenPhrase.replaceAll("\\bzweiundzwanzig\\b", "22");
+        spokenPhrase = spokenPhrase.replaceAll("\\bdreiundzwanzig\\b", "23");
+        spokenPhrase = spokenPhrase.replaceAll("\\bvierundzwanzig\\b", "24");
+        spokenPhrase = spokenPhrase.replaceAll("\\bfünfundzwanzig\\b", "25");
+        spokenPhrase = spokenPhrase.replaceAll("\\bsechsundzwanzig\\b", "26");
+        spokenPhrase = spokenPhrase.replaceAll("\\bsiebenundzwanzig\\b", "27");
+        spokenPhrase = spokenPhrase.replaceAll("\\bachtundzwanzig\\b", "28");
+        spokenPhrase = spokenPhrase.replaceAll("\\bneunundzwanzig\\b", "29");
+        spokenPhrase = spokenPhrase.replaceAll("\\bdreißig\\b", "30");
+        spokenPhrase = spokenPhrase.replaceAll("\\beinunddreißig\\b", "31");
+        spokenPhrase = spokenPhrase.replaceAll("\\bzweiunddreißig\\b", "32");
+        spokenPhrase = spokenPhrase.replaceAll("\\bdreiunddreißig\\b", "33");
+        spokenPhrase = spokenPhrase.replaceAll("\\bvierunddreißig\\b", "34");
+        spokenPhrase = spokenPhrase.replaceAll("\\bfünfunddreißig\\b", "35");
+        spokenPhrase = spokenPhrase.replaceAll("\\bsechsunddreißig\\b", "36");
+        spokenPhrase = spokenPhrase.replaceAll("\\bsiebenunddreißig\\b", "37");
+        spokenPhrase = spokenPhrase.replaceAll("\\bachtunddreißig\\b", "38");
+        spokenPhrase = spokenPhrase.replaceAll("\\bneununddreißig\\b", "39");
+        spokenPhrase = spokenPhrase.replaceAll("\\bvierzig\\b", "40");
+        spokenPhrase = spokenPhrase.replaceAll("\\beinundvierzig\\b", "41");
+        spokenPhrase = spokenPhrase.replaceAll("\\bzweiundvierzig\\b", "42");
+        spokenPhrase = spokenPhrase.replaceAll("\\bdreiundvierzig\\b", "44");
+        spokenPhrase = spokenPhrase.replaceAll("\\bvierundvierzig\\b", "44");
+        spokenPhrase = spokenPhrase.replaceAll("\\bfünfundvierzig\\b", "45");
+        spokenPhrase = spokenPhrase.replaceAll("\\bsechsundvierzig\\b", "46");
+        spokenPhrase = spokenPhrase.replaceAll("\\bsiebenundvierzig\\b", "47");
+        spokenPhrase = spokenPhrase.replaceAll("\\bachtundvierzig\\b", "48");
+        spokenPhrase = spokenPhrase.replaceAll("\\bneunundvierzig\\b", "49");
+        spokenPhrase = spokenPhrase.replaceAll("\\bfünfzig\\b", "50");
+        spokenPhrase = spokenPhrase.replaceAll("\\beinundfünfzig\\b", "51");
+        spokenPhrase = spokenPhrase.replaceAll("\\bzweiundfünfzig\\b", "52");
+        spokenPhrase = spokenPhrase.replaceAll("\\bdreiundfünfzig\\b", "55");
+        spokenPhrase = spokenPhrase.replaceAll("\\bvierundfünfzig\\b", "55");
+        spokenPhrase = spokenPhrase.replaceAll("\\bfünfundfünfzig\\b", "55");
+        spokenPhrase = spokenPhrase.replaceAll("\\bsechsundfünfzig\\b", "56");
+        spokenPhrase = spokenPhrase.replaceAll("\\bsiebenundfünfzig\\b", "57");
+        spokenPhrase = spokenPhrase.replaceAll("\\bachtundfünfzig\\b", "58");
+        spokenPhrase = spokenPhrase.replaceAll("\\bneunundfünfzig\\b", "59");
+        spokenPhrase = spokenPhrase.replaceAll("\\bsechzig\\b", "60");
+        spokenPhrase = spokenPhrase.replaceAll("\\beinundsechzig\\b", "61");
+        spokenPhrase = spokenPhrase.replaceAll("\\bzweiundsechzig\\b", "62");
+        spokenPhrase = spokenPhrase.replaceAll("\\bdreiundsechzig\\b", "66");
+        spokenPhrase = spokenPhrase.replaceAll("\\bvierundsechzig\\b", "66");
+        spokenPhrase = spokenPhrase.replaceAll("\\bfünfundsechzig\\b", "65");
+        spokenPhrase = spokenPhrase.replaceAll("\\bsechsundsechzig\\b", "66");
+        spokenPhrase = spokenPhrase.replaceAll("\\bsiebenundsechzig\\b", "67");
+        spokenPhrase = spokenPhrase.replaceAll("\\bachtundsechzig\\b", "68");
+        spokenPhrase = spokenPhrase.replaceAll("\\bneunundsechzig\\b", "69");
+        spokenPhrase = spokenPhrase.replaceAll("\\bsiebzig\\b", "70");
+        spokenPhrase = spokenPhrase.replaceAll("\\beinundsiebzig\\b", "71");
+        spokenPhrase = spokenPhrase.replaceAll("\\bzweiundsiebzig\\b", "72");
+        spokenPhrase = spokenPhrase.replaceAll("\\bdreiundsiebzig\\b", "73");
+        spokenPhrase = spokenPhrase.replaceAll("\\bvierundsiebzig\\b", "74");
+        spokenPhrase = spokenPhrase.replaceAll("\\bfünfundsiebzig\\b", "75");
+        spokenPhrase = spokenPhrase.replaceAll("\\bsechsundsiebzig\\b", "76");
+        spokenPhrase = spokenPhrase.replaceAll("\\bsiebenundsiebzig\\b", "77");
+        spokenPhrase = spokenPhrase.replaceAll("\\bachtundsiebzig\\b", "78");
+        spokenPhrase = spokenPhrase.replaceAll("\\bneunundsiebzig\\b", "79");
+        return spokenPhrase;
+    }
+}

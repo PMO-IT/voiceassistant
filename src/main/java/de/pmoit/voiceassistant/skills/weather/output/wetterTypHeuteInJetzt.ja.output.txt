@@ -1,0 +1,2 @@
+Ja, es [replaceA] aktuell in [replaceOrt]
+Ja, es [replaceA] jetzt gerade in [replaceOrt]

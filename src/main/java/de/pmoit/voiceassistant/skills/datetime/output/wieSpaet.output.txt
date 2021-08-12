@@ -1,0 +1,3 @@
+Es ist [replaceA]
+Aktuell ist es [replaceA]
+Wir haben es [replaceA]
