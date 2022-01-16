@@ -80,9 +80,8 @@ This skill returns the current time, date and day. You can change or add respons
 - Appointments / Reminder
 
 ### Notice
-Currently there is no working Maven repository for MaryTTS so you have to add it manually to your project. I added the ones I use to the external libraries folder.
-
-You can download the libraries here: https://github.com/marytts/marytts/releases/tag/v5.2
+Added the recent repository for mary to the pom. This repository could change in the near future.
+In that case you can download the libraries here: https://github.com/marytts/marytts/releases/tag/v5.2
 
 You need the following files:
    - marytts-runtime-5.2-jar-with-dependencies.jar
