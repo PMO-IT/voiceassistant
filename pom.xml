@@ -26,7 +26,7 @@
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-			<version>29.0-jre</version>
+			<version>25.0-jre</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -50,11 +50,38 @@
 			<version>20200518</version>
 		</dependency>
 
+		<!-- MaryTTS -->
+		<dependency>
+			<groupId>de.dfki.mary</groupId>
+			<artifactId>marytts-runtime</artifactId>
+			<version>5.2</version>
+		</dependency>
+		<dependency>
+			<groupId>de.dfki.mary</groupId>
+			<artifactId>marytts-common</artifactId>
+			<version>5.2</version>
+		</dependency>
+		<dependency>
+			<groupId>de.dfki.mary</groupId>
+			<artifactId>marytts-signalproc</artifactId>
+			<version>5.2</version>
+		</dependency>
+		<dependency>
+			<groupId>de.dfki.mary</groupId>
+			<artifactId>voice-bits1-hsmm</artifactId>
+			<version>5.2</version>
+		</dependency>
+		<dependency>
+			<groupId>de.dfki.mary</groupId>
+			<artifactId>marytts-lang-de</artifactId>
+			<version>5.2</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.reflections/reflections -->
 		<dependency>
 			<groupId>org.reflections</groupId>
 			<artifactId>reflections</artifactId>
-			<version>0.9.12</version>
+			<version>0.10.2</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/javax.json/javax.json-api -->
@@ -73,7 +100,7 @@
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpcore</artifactId>
-			<version>4.4.1</version>
+			<version>4.4.8</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
@@ -147,6 +174,10 @@
 		</plugins>
 	</build>
 
-	
-
+	<repositories>
+		<repository>
+			<id>JCenter</id>
+			<url>https://jcenter.bintray.com</url>
+		</repository>
+	</repositories>
 </project>

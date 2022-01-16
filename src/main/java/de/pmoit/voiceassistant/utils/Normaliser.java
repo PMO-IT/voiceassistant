@@ -37,6 +37,16 @@ public class Normaliser {
         spokenPhrase = spokenPhrase.replaceAll("\\bachtundzwanzig\\b", "28");
         spokenPhrase = spokenPhrase.replaceAll("\\bneunundzwanzig\\b", "29");
         spokenPhrase = spokenPhrase.replaceAll("\\bdreißig\\b", "30");
+        spokenPhrase = spokenPhrase.replaceAll("\\bdreissig\\b", "30");
+        spokenPhrase = spokenPhrase.replaceAll("\\beinunddreissig\\b", "31");
+        spokenPhrase = spokenPhrase.replaceAll("\\bzweiunddreissig\\b", "32");
+        spokenPhrase = spokenPhrase.replaceAll("\\bdreiunddreissig\\b", "33");
+        spokenPhrase = spokenPhrase.replaceAll("\\bvierunddreissig\\b", "34");
+        spokenPhrase = spokenPhrase.replaceAll("\\bfünfunddreissig\\b", "35");
+        spokenPhrase = spokenPhrase.replaceAll("\\bsechsunddreissig\\b", "36");
+        spokenPhrase = spokenPhrase.replaceAll("\\bsiebenunddreissig\\b", "37");
+        spokenPhrase = spokenPhrase.replaceAll("\\bachtunddreissig\\b", "38");
+        spokenPhrase = spokenPhrase.replaceAll("\\bneununddreissig\\b", "39");
         spokenPhrase = spokenPhrase.replaceAll("\\beinunddreißig\\b", "31");
         spokenPhrase = spokenPhrase.replaceAll("\\bzweiunddreißig\\b", "32");
         spokenPhrase = spokenPhrase.replaceAll("\\bdreiunddreißig\\b", "33");

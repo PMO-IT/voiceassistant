@@ -7,6 +7,7 @@ import org.reflections.Reflections;
 
 import de.pmoit.voiceassistant.skills.Skill;
 import de.pmoit.voiceassistant.tts.TextToSpeech;
+import de.pmoit.voiceassistant.utils.playsound.PlaySound;
 
 
 /**
@@ -29,7 +30,11 @@ public class SkillSet {
         for (Skill skill : skills) {
             if (skill.canHandle(spokenWords)) {
                 String skillResult = skill.handle(spokenWords);
-                tts.speak(skillResult);
+                if (skillResult.equals("")) {
+                    PlaySound.playAcknowledgeSound();
+                } else {
+                    tts.speak(skillResult);
+                }
                 break;
             }
         }
@@ -52,6 +57,7 @@ public class SkillSet {
     public static SkillSet fromPackage(String skillPackage, TextToSpeech tts) {
         Reflections reflections = new Reflections(skillPackage);
         List<Skill> skills = reflections.getSubTypesOf(Skill.class).stream().map((clazz) -> {
+            System.out.println(clazz);
             return createSkillInstance(clazz);
         }).collect(Collectors.toList());
         return new SkillSet(skills, tts);

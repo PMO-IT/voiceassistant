@@ -19,6 +19,9 @@ src/main/java/de/pmoit/voiceassistant/skills/reminder
 src/main/java/de/pmoit/voiceassistant/skills/rssreader
 src/main/java/de/pmoit/voiceassistant/skills/spotify
 src/main/java/de/pmoit/voiceassistant/skills/youtube
+src/main/java/de/pmoit/voiceassistant/skills/loxone
 resources/skills/light.config.properties
 resources/skills/rssreader.config.properties
 resources/skills/spotify.config.properties
+resources/skills/loxone.config.properties
+resources/skills/weather.config.properties

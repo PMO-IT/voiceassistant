@@ -4,16 +4,21 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 
-public class JSONParserWetherApp {
+public class JSONParserWeatherApp {
     private JSONObject obj;
 
-    public JSONParserWetherApp(String jsonString) {
+    public JSONParserWeatherApp(String jsonString) {
         obj = new JSONObject(jsonString);
     }
 
     public double parseWetherResultsAsDouble(String topElement, String subElement) {
         JSONObject jsonObject = obj.getJSONObject(topElement);
         return jsonObject.getDouble(subElement);
+    }
+
+    public int parseWetherResultsAsInt(String topElement, String subElement) {
+        JSONObject jsonObject = obj.getJSONObject(topElement);
+        return jsonObject.getInt(subElement);
     }
 
     public String parseWetherResultsAsString(String topElement, String subElement) {

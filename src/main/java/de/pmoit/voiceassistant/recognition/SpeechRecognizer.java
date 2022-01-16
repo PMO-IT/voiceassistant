@@ -33,6 +33,7 @@ public class SpeechRecognizer {
      */
     public void start() {
         logger.info("Starting Speech Recognizer...\n");
+        tts.speak("Hallo, ich bin Nova.");
         try {
             String speechResult;
             client.prepareTranscription();
@@ -69,6 +70,7 @@ public class SpeechRecognizer {
     private String normaliseResultByCallToAction(String speechRecognitionResult) {
         String callToAction1 = GlobalConfiguration.getCallToAction1();
         String callToAction2 = GlobalConfiguration.getCallToAction2();
+        String callToAction3 = GlobalConfiguration.getCallToAction3();
 
         String recognitionResultToLower = speechRecognitionResult.toLowerCase();
 
@@ -76,7 +78,9 @@ public class SpeechRecognizer {
         if (posCallToAction == - 1) {
             posCallToAction = recognitionResultToLower.indexOf(callToAction2);
         }
-
+        if (posCallToAction == - 1) {
+            posCallToAction = recognitionResultToLower.indexOf(callToAction3);
+        }
         if (posCallToAction == - 1) {
             return "";
         }

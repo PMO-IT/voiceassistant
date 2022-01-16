@@ -349,4 +349,118 @@ public class WeatherSkillTest {
             "Morgen soll Leichter Regen geben, in berlin")));
     }
 
+    @Test
+    public void whenIsSunriseDefaultCity() throws IOException {
+        final String JSON_FILE_PATH = "weatherskill/cloudy_frankfurt.json";
+        final String JSON_FILE_PATH_FORECAST = "weatherskill/forecast_frankfurt.json";
+        final int PORT = wireMockRule.port();
+        final WeatherSkill weatherskill = new WeatherSkill(HOST + ":" + PORT);
+
+        wireMockRule.stubFor(get(WireMock.urlPathEqualTo("/data/2.5/weather")).withQueryParam("q", WireMock.equalTo(
+            "Frankfurt+am+Main")).withQueryParam("appid", WireMock.notMatching("")).willReturn(aResponse().withStatus(200)
+                .withHeader("Content-Type", "application/json; charset=utf-8").withBodyFile(JSON_FILE_PATH)));
+
+        wireMockRule.stubFor(get(WireMock.urlPathEqualTo("/data/2.5/onecall")).withQueryParam("appid", WireMock.notMatching(
+            "")).willReturn(aResponse().withStatus(200).withHeader("Content-Type", "application/json; charset=utf-8")
+                .withBodyFile(JSON_FILE_PATH_FORECAST)));
+
+        String response = weatherskill.handle("wann geht die Sonne auf");
+        assertEquals("Die Sonne geht um 06 uhr 05 auf in Frankfurt am Main", response);
+    }
+
+    @Test
+    public void whenIsSunriseAlternativePhraseDefaultCity() throws IOException {
+        final String JSON_FILE_PATH = "weatherskill/cloudy_frankfurt.json";
+        final String JSON_FILE_PATH_FORECAST = "weatherskill/forecast_frankfurt.json";
+        final int PORT = wireMockRule.port();
+        final WeatherSkill weatherskill = new WeatherSkill(HOST + ":" + PORT);
+
+        wireMockRule.stubFor(get(WireMock.urlPathEqualTo("/data/2.5/weather")).withQueryParam("q", WireMock.equalTo(
+            "Frankfurt+am+Main")).withQueryParam("appid", WireMock.notMatching("")).willReturn(aResponse().withStatus(200)
+                .withHeader("Content-Type", "application/json; charset=utf-8").withBodyFile(JSON_FILE_PATH)));
+
+        wireMockRule.stubFor(get(WireMock.urlPathEqualTo("/data/2.5/onecall")).withQueryParam("appid", WireMock.notMatching(
+            "")).willReturn(aResponse().withStatus(200).withHeader("Content-Type", "application/json; charset=utf-8")
+                .withBodyFile(JSON_FILE_PATH_FORECAST)));
+
+        String response = weatherskill.handle("wann ist Sonnenaufgang");
+        assertEquals("Die Sonne geht um 06 uhr 05 auf in Frankfurt am Main", response);
+    }
+
+    @Test
+    public void whenIsSunriseBerlin() throws IOException {
+        final String JSON_FILE_PATH = "weatherskill/cloudy_berlin.json";
+        final String JSON_FILE_PATH_FORECAST = "weatherskill/forecast_berlin.json";
+        final int PORT = wireMockRule.port();
+        final WeatherSkill weatherskill = new WeatherSkill(HOST + ":" + PORT);
+
+        wireMockRule.stubFor(get(WireMock.urlPathEqualTo("/data/2.5/weather")).withQueryParam("q", WireMock.equalTo(
+            "berlin")).withQueryParam("appid", WireMock.notMatching("")).willReturn(aResponse().withStatus(200).withHeader(
+                "Content-Type", "application/json; charset=utf-8").withBodyFile(JSON_FILE_PATH)));
+
+        wireMockRule.stubFor(get(WireMock.urlPathEqualTo("/data/2.5/onecall")).withQueryParam("appid", WireMock.notMatching(
+            "")).willReturn(aResponse().withStatus(200).withHeader("Content-Type", "application/json; charset=utf-8")
+                .withBodyFile(JSON_FILE_PATH_FORECAST)));
+
+        String response = weatherskill.handle("wann geht die Sonne auf in berlin");
+        assertEquals("Die Sonne geht um 05 uhr 39 auf in berlin", response);
+    }
+
+    @Test
+    public void whenIsSunsetDefaultCity() throws IOException {
+        final String JSON_FILE_PATH = "weatherskill/cloudy_frankfurt.json";
+        final String JSON_FILE_PATH_FORECAST = "weatherskill/forecast_frankfurt.json";
+        final int PORT = wireMockRule.port();
+        final WeatherSkill weatherskill = new WeatherSkill(HOST + ":" + PORT);
+
+        wireMockRule.stubFor(get(WireMock.urlPathEqualTo("/data/2.5/weather")).withQueryParam("q", WireMock.equalTo(
+            "Frankfurt+am+Main")).withQueryParam("appid", WireMock.notMatching("")).willReturn(aResponse().withStatus(200)
+                .withHeader("Content-Type", "application/json; charset=utf-8").withBodyFile(JSON_FILE_PATH)));
+
+        wireMockRule.stubFor(get(WireMock.urlPathEqualTo("/data/2.5/onecall")).withQueryParam("appid", WireMock.notMatching(
+            "")).willReturn(aResponse().withStatus(200).withHeader("Content-Type", "application/json; charset=utf-8")
+                .withBodyFile(JSON_FILE_PATH_FORECAST)));
+
+        String response = weatherskill.handle("wann geht die Sonne unter");
+        assertEquals("Die Sonne geht um 20 uhr 55 unter in Frankfurt am Main", response);
+    }
+
+    @Test
+    public void whenIsSunsetAlternativePhraseDefaultCity() throws IOException {
+        final String JSON_FILE_PATH = "weatherskill/cloudy_frankfurt.json";
+        final String JSON_FILE_PATH_FORECAST = "weatherskill/forecast_frankfurt.json";
+        final int PORT = wireMockRule.port();
+        final WeatherSkill weatherskill = new WeatherSkill(HOST + ":" + PORT);
+
+        wireMockRule.stubFor(get(WireMock.urlPathEqualTo("/data/2.5/weather")).withQueryParam("q", WireMock.equalTo(
+            "Frankfurt+am+Main")).withQueryParam("appid", WireMock.notMatching("")).willReturn(aResponse().withStatus(200)
+                .withHeader("Content-Type", "application/json; charset=utf-8").withBodyFile(JSON_FILE_PATH)));
+
+        wireMockRule.stubFor(get(WireMock.urlPathEqualTo("/data/2.5/onecall")).withQueryParam("appid", WireMock.notMatching(
+            "")).willReturn(aResponse().withStatus(200).withHeader("Content-Type", "application/json; charset=utf-8")
+                .withBodyFile(JSON_FILE_PATH_FORECAST)));
+
+        String response = weatherskill.handle("wann ist Sonnenuntergang");
+        assertEquals("Die Sonne geht um 20 uhr 55 unter in Frankfurt am Main", response);
+    }
+
+    @Test
+    public void whenIsSunsetBerlin() throws IOException {
+        final String JSON_FILE_PATH = "weatherskill/cloudy_berlin.json";
+        final String JSON_FILE_PATH_FORECAST = "weatherskill/forecast_berlin.json";
+        final int PORT = wireMockRule.port();
+        final WeatherSkill weatherskill = new WeatherSkill(HOST + ":" + PORT);
+
+        wireMockRule.stubFor(get(WireMock.urlPathEqualTo("/data/2.5/weather")).withQueryParam("q", WireMock.equalTo(
+            "berlin")).withQueryParam("appid", WireMock.notMatching("")).willReturn(aResponse().withStatus(200).withHeader(
+                "Content-Type", "application/json; charset=utf-8").withBodyFile(JSON_FILE_PATH)));
+
+        wireMockRule.stubFor(get(WireMock.urlPathEqualTo("/data/2.5/onecall")).withQueryParam("appid", WireMock.notMatching(
+            "")).willReturn(aResponse().withStatus(200).withHeader("Content-Type", "application/json; charset=utf-8")
+                .withBodyFile(JSON_FILE_PATH_FORECAST)));
+
+        String response = weatherskill.handle("wann geht die Sonne unter in berlin");
+        assertEquals("Die Sonne geht um 20 uhr 44 unter in berlin", response);
+
+    }
 }

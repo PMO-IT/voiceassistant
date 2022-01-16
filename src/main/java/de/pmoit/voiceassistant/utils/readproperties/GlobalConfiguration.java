@@ -26,6 +26,10 @@ public class GlobalConfiguration {
         return getProperty("call_to_action2");
     }
 
+    public static String getCallToAction3() {
+        return getProperty("call_to_action3");
+    }
+
     public static String getStopAction() {
         return getProperty("stop_action");
     }
